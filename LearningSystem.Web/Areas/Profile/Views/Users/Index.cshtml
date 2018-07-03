@@ -1,0 +1,65 @@
+﻿@model UserProfileViewModel
+
+@{
+    ViewData["Title"] = $"User: {Model.Profile.Username}";
+    //ViewData.AddActivePage(ManageNavPages.GetProfile);
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h3>Name: @Model.Profile.Name</h3>
+<h4>Birthdate: @Model.Profile.Birthday.ToShortDateString()</h4>
+
+@if (Model.Profile.Username == User.Identity.Name)
+{
+    <div class="row">
+        <div class="col-md-6">
+            <a asp-controller="Manage" asp-action="Index" class="btn btn-primary">Profile Info</a>
+            <br />
+            <br />
+            @if (!User.IsInRole(IdentitiesConstants.TRAINER_ROLE) && !User.IsInRole(IdentitiesConstants.AUTHOR_ROLE))
+            {
+                <div class="row">
+                    <div class="col-md-6">
+                        <a asp-action="CreateRole" asp-route-id="@Model.UserId" class="btn btn-primary">Add Role</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <br />
+}
+<br />
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Course</th>
+            <th>Grade</th>
+            <th>Certificate</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model.Profile.Courses)
+        {
+            <tr>
+                <td>
+                    <a asp-controller="Courses" asp-action="Details" asp-route-courseId="@course.Id" asp-route-name="@course.Name.ToFriendlyUrl()">@course.Name</a>
+                </td>
+                <td>
+                    @(course.Grade == null ? "No Grade" : course.Grade.ToString())
+                </td>
+                <td>
+                    @if (course.Grade == Grade.A || course.Grade == Grade.B || course.Grade == Grade.C)
+                    {
+                        <a asp-action="DownloadCertificate" asp-route-id="@course.Id">Download</a>
+                    }
+                    else
+                    {
+                        @: Not applicable
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,73 @@
+﻿@model RolesListingViewModel
+
+@{
+    ViewData["Title"] = "User Roles";
+}
+
+
+<h2>Roles for user @Model.Username</h2>
+
+@if (!Model.Roles.Any())
+{
+    <h3>No roles for user @Model.Username</h3>
+    <td><a asp-area="Admin" asp-controller="Users" asp-action="ChangeRoles" asp-route-id="@Model.Id" class="btn btn-primary">Add</a></td>
+
+}
+else
+{
+    <div class="row">
+        <div class="col-md-3">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var role in Model.Roles)
+                    {
+                        <tr>
+                            <td>@role</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Manage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Username</td>
+                <td>
+                    <form asp-controller="Users" asp-action="DestroyRole" method="post">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <input type="hidden" name="UserId" value="@Model.Id" />
+                                <select name="Role" asp-items="Model.ListRole" class="form-control"></select>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="submit" value="Delete" class="btn btn-sm btn-danger" />
+                            </div>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a asp-area="Admin" asp-controller="Users" asp-action="Index" class="btn btn-default">Back</a>
+}
+
+
+
+
+
+
+
+

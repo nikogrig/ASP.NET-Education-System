@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="4.0.1" />
+    <PackageReference Include="HtmlSanitizer" Version="4.0.185" />
+    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="1.4.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LearningSystem.Common\LearningSystem.Common.csproj" />
+    <ProjectReference Include="..\LearningSystem.Constants\LearningSystem.Constants.csproj" />
+    <ProjectReference Include="..\LearningSystem.Data\LearningSystem.Data.csproj" />
+  </ItemGroup>
+
+</Project>

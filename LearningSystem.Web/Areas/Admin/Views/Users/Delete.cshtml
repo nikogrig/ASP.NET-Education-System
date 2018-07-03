@@ -1,0 +1,14 @@
+﻿@model DeleteUserViewModel
+
+@{
+    ViewData["Title"] = "Delete User";
+}
+
+<h2>Are you sure want to delete the user @Model.Username?</h2>
+
+<a asp-area="Admin" asp-controller="Users" asp-action="Destroy" asp-route-id="@Model.Id" class="btn btn-danger">Yes!</a>
+
+<div>
+    <br />
+    <a asp-area="Admin" asp-controller="Users" asp-action="Index" class="btn btn-default">Back</a>
+</div>

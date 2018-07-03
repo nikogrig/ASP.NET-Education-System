@@ -1,0 +1,40 @@
+﻿@model CoursesListingViewModel
+
+@{
+    ViewData["Title"] = "Trainer Courses";
+}
+
+<h2>Your Courses</h2>
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Enrolled Students</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model.Courses)
+        {
+            <tr>
+                <td>
+                    <a asp-area="Modules"
+                       asp-controller="Courses"
+                       asp-action="Details"
+                       asp-route-courseId="@course.Id"
+                       asp-route-name="@course.Name.ToFriendlyUrl()">
+                        @course.Name
+                    </a>
+                </td>
+                <td>@(course.StartDate < DateTime.UtcNow ? "Outdated" : "Active")</td>
+                <td>@course.StartDate</td>
+                <td>@course.EndDate</td>
+                <td><a class="btn btn-primary" asp-action="Students" asp-route-courseId="@course.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

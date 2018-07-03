@@ -1,0 +1,20 @@
+﻿@model UserCreateRoleViewModel
+
+@{
+    ViewData["Title"] = $"Create Role {Model.User.Name}";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="CreateRole" method="post">
+    <div class="row">
+        <div class="col-md-8">
+            <input type="hidden" name="UserId" value="@Model.User.Id" />
+            <select name="Role" asp-items="Model.Roles" class="form-control"></select>
+        </div>
+        <div class="col-md-2">
+            <input type="submit" value="Add to Role" class="btn btn-sm btn-primary" />
+        </div>
+    </div>
+</form>
+<br />

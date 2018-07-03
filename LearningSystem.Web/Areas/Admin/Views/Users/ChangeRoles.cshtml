@@ -1,0 +1,46 @@
+﻿@model UserChangeRoleListingViewModel
+
+@{
+    ViewData["Title"] = "Change Roles";
+}
+
+<h2>Roles for user @Model.User.Username</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>E-mail</th>
+            <th>Manage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.User.Username</td>
+            <td>@Model.User.Email</td>
+            <td>
+                <form asp-controller="Users" asp-action="AddToRole" method="post">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <input type="hidden" name="UserId" value="@Model.User.Id" />
+                            <select name="Role" asp-items="Model.Roles" class="form-control"></select>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="submit" value="Add to Role" class="btn btn-sm btn-primary" />
+                        </div>
+                    </div>
+                </form>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div>
+    <br />
+    <a asp-area="Admin" asp-controller="Users" asp-action="Index" class="btn btn-default">Back</a>
+</div>
+
+
+
+
+
+

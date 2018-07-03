@@ -1,0 +1,16 @@
+C:\My Staff\SoftUni\09 ASP.NET MVC Framework\LearningSystem\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Services.deps.json
+C:\My Staff\SoftUni\09 ASP.NET MVC Framework\LearningSystem\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Services.dll
+C:\My Staff\SoftUni\09 ASP.NET MVC Framework\LearningSystem\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Services.pdb
+C:\My Staff\SoftUni\09 ASP.NET MVC Framework\LearningSystem\LearningSystem.Web\LearningSystem.Services\obj\Debug\netstandard2.0\LearningSystem.Services.csprojAssemblyReference.cache
+C:\My Staff\SoftUni\09 ASP.NET MVC Framework\LearningSystem\LearningSystem.Web\LearningSystem.Services\obj\Debug\netstandard2.0\LearningSystem.Services.csproj.CoreCompileInputs.cache
+C:\My Staff\SoftUni\09 ASP.NET MVC Framework\LearningSystem\LearningSystem.Web\LearningSystem.Services\obj\Debug\netstandard2.0\LearningSystem.Services.AssemblyInfoInputs.cache
+C:\My Staff\SoftUni\09 ASP.NET MVC Framework\LearningSystem\LearningSystem.Web\LearningSystem.Services\obj\Debug\netstandard2.0\LearningSystem.Services.AssemblyInfo.cs
+C:\My Staff\SoftUni\09 ASP.NET MVC Framework\LearningSystem\LearningSystem.Web\LearningSystem.Services\obj\Debug\netstandard2.0\LearningSystem.Services.dll
+C:\My Staff\SoftUni\09 ASP.NET MVC Framework\LearningSystem\LearningSystem.Web\LearningSystem.Services\obj\Debug\netstandard2.0\LearningSystem.Services.pdb
+C:\My Staff\SoftUni\09 ASP.NET MVC Framework\LearningSystem\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Common.dll
+C:\My Staff\SoftUni\09 ASP.NET MVC Framework\LearningSystem\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Constants.dll
+C:\My Staff\SoftUni\09 ASP.NET MVC Framework\LearningSystem\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Data.dll
+C:\My Staff\SoftUni\09 ASP.NET MVC Framework\LearningSystem\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Common.pdb
+C:\My Staff\SoftUni\09 ASP.NET MVC Framework\LearningSystem\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Data.pdb
+C:\My Staff\SoftUni\09 ASP.NET MVC Framework\LearningSystem\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Constants.pdb
+C:\My Staff\SoftUni\09 ASP.NET MVC Framework\LearningSystem\LearningSystem.Web\LearningSystem.Services\obj\Debug\netstandard2.0\LearningSystem.Services.csproj.CopyComplete

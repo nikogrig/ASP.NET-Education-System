@@ -1,0 +1,64 @@
+﻿@model SearchViewModel
+@{
+    ViewData["Title"] = $"Search Result For {Model.SearchText}";
+}
+
+<h3>@ViewData["Title"]</h3>
+
+@if (Model.Courses.Any())
+{
+    <div class="row course-listings img-responsive">
+        @await Html.PartialAsync("_CourseListingSearchedPartial", Model.Courses)
+    </div>
+}
+else
+{
+    <h4>No courses found</h4>
+}
+
+<br />
+
+@if (Model.Users.Any())
+{
+    <ul>
+        @foreach (var user in Model.Users)
+        {
+            <li>
+                <a asp-area="Profile"
+                   asp-controller="Users"
+                   asp-action="Index"
+                   asp-route-username="@user.Username">
+                    @user.Name - @user.Courses courses
+                </a>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <h4>No users found</h4>
+}
+
+<br />
+
+@if (Model.Blog.Any())
+{
+    <ul>
+        @foreach (var article in Model.Blog)
+        {
+            <li>
+                <a asp-area="Blog"
+                   asp-controller="Articles"
+                   asp-action="Details"
+                   asp-route-id="@article.Id"
+                   asp-route-title="@article.Title.ToFriendlyUrl()">
+                    @article.Title - @article.PublishDate (published by @article.Author)
+                </a>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <h4>No article found</h4>
+}
