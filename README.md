@@ -5,12 +5,12 @@
 - Entity Framework Core
 - AutoMapper
 - Razor Engine
--- Bootstrap
+- Bootstrap
 
 ** Extensions for:
-   -- Service layer
-   -- Identities role
-   -- DB Migration
+ -- Service layer
+ -- Identities role
+ -- DB Migration
    
 The project is a Learning/Education system that has three main roles (administrator, trainer and author) 
 and is divided into several areas.
