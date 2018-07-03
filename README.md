@@ -6,6 +6,7 @@
 - AutoMapper
 - Razor Engine
 -- Bootstrap
+
 ** Extensions for:
    -- Service layer
    -- Identities role
